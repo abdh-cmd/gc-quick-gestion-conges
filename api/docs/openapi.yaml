@@ -1,0 +1,137 @@
+openapi: 3.0.3
+info:
+  title: API Tempolis
+  version: 0.0.1
+  description: |
+    Spécification de l'API actuellement implémentée.
+    Cette version expose un endpoint public de bienvenue.
+servers:
+  - url: http://localhost:3000
+    description: Serveur local par défaut
+paths:
+  /:
+    get:
+      summary: Retourner le message de bienvenue
+      operationId: getHello
+      responses:
+        '200':
+          description: Message de bienvenue retourné avec succès.
+          content:
+            text/html:
+              schema:
+                type: string
+                example: Hello World!
+  /auth/register:
+    post:
+      summary: Créer un utilisateur et retourner un JWT
+      operationId: register
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RegisterInput'
+      responses:
+        '201':
+          $ref: '#/components/responses/AuthSuccess'
+        '400':
+          description: Données invalides ou structure inconnue.
+        '409':
+          description: E-mail déjà utilisé.
+  /auth/login:
+    post:
+      summary: Se connecter avec un e-mail et un mot de passe
+      operationId: login
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LoginInput'
+      responses:
+        '201':
+          $ref: '#/components/responses/AuthSuccess'
+        '401':
+          description: Identifiants incorrects.
+  /auth/profile:
+    get:
+      summary: Retourner le profil de l'utilisateur connecté
+      operationId: getProfile
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Profil de l'utilisateur connecté.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PublicUser'
+        '401':
+          description: Jeton absent, invalide ou expiré.
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  responses:
+    AuthSuccess:
+      description: Jeton JWT et utilisateur authentifié.
+      content:
+        application/json:
+          schema:
+            type: object
+            required: [accessToken, tokenType, utilisateur]
+            properties:
+              accessToken:
+                type: string
+              tokenType:
+                type: string
+                example: Bearer
+              utilisateur:
+                $ref: '#/components/schemas/PublicUser'
+  schemas:
+    LoginInput:
+      type: object
+      required: [email, motDePasse]
+      properties:
+        email:
+          type: string
+          format: email
+        motDePasse:
+          type: string
+          format: password
+          minLength: 8
+    RegisterInput:
+      allOf:
+        - $ref: '#/components/schemas/LoginInput'
+        - type: object
+          required: [nom, prenom, matricule, role, structureId]
+          properties:
+            nom:
+              type: string
+            prenom:
+              type: string
+            matricule:
+              type: string
+            role:
+              type: string
+            structureId:
+              type: string
+    PublicUser:
+      type: object
+      required: [id, nom, prenom, email, matricule, role]
+      properties:
+        id:
+          type: string
+        nom:
+          type: string
+        prenom:
+          type: string
+        email:
+          type: string
+          format: email
+        matricule:
+          type: string
+        role:
+          type: string
