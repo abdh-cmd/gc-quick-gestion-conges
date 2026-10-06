@@ -1,7 +1,3 @@
-# Projets – Développement informatique
-
-Ce dépôt présente plusieurs projets réalisés au cours de mon parcours en informatique.
-
 ## 🏢 GC Quick – Gestion des congés
 
 Application web réalisée dans le cadre de ma formation **Concepteur Développeur d'Applications (CDA) au CFA INSTA Paris**.
