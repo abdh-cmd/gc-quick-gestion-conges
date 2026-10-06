@@ -1,0 +1,63 @@
+                      PROJET DE FIN D'ÉTUDES
+                           CYCLE DE FORMATION
+
+                  Concepteur Développeur d'Applications
+                             Titre RNCP ­ Niveau 6
+
+                         GC QUICK
+
+                              Gestion des congés
+
+                    Sujet : Conception et développement d'une application web
+                             de gestion et de suivi des demandes de congés
+
+Soutenu par : MOUDJAHED Abdelhakim
+
+ENTREPRISE : Quick 326
+Sous le tutorat de : BOUAASSRIA Aziz
+
+                                            Période : 2025 ­ 2026
+                                   Sommaire
+
+Remerciements
+Résumé / Abstract
+Glossaire
+Introduction
+1. Présentation du contexte et du projet
+2. Analyse des besoins et spécifications
+3. Conception de l'application
+4. Réalisation technique
+5. Tests, déploiement et démonstration
+Conclusion et perspectives
+Annexes
+                                  Introduction
+
+La gestion des congés constitue une activité essentielle pour toute organisation. Lorsqu'elle repose sur
+des échanges informels, des messages ou des documents dispersés, le suivi des demandes devient plus
+difficile : les salariés ne disposent pas toujours d'une vision claire de leur solde, les responsables doivent
+traiter les demandes manuellement et l'historique des décisions peut être difficile à retrouver.
+
+Dans le cadre de mon projet de fin d'études de Concepteur Développeur d'Applications, j'ai conçu et
+développé GC Quick, une application web dédiée à la gestion des demandes de congés. L'objectif est de
+centraliser le processus, depuis la création d'une demande par un employé jusqu'à sa validation ou son
+refus par un responsable RH ou un manager.
+
+L'application propose deux espaces adaptés aux rôles des utilisateurs. L'employé peut se connecter,
+consulter son tableau de bord et son solde de congés, créer, modifier ou supprimer une demande en
+attente, suivre ses demandes, consulter son historique, recevoir des notifications et gérer son profil. Le
+responsable RH ou manager peut consulter l'ensemble des demandes, accéder à leur détail, puis les
+valider ou les refuser. Chaque décision génère une notification et est conservée dans l'historique afin
+d'assurer une meilleure traçabilité.
+
+La solution repose sur une architecture en trois tiers. Le front-end est développé avec Angular et assure
+l'interface utilisateur. Une API REST développée avec NestJS gère les règles métier, l'authentification
+et les autorisations. Les données sont stockées dans une base MySQL/MariaDB, avec TypeORM pour la
+persistance. La sécurité est prise en compte grâce à l'authentification par jeton JWT, au hachage des
+mots de passe avec bcrypt et à la gestion des rôles.
+
+Ce mémoire présente les différentes étapes de réalisation du projet. Il expose d'abord le contexte et les
+besoins identifiés, puis les choix de conception au travers des diagrammes et des modèles de données. Il
+détaille ensuite la réalisation technique, les tests effectués, le déploiement local de l'application et une
+démonstration de ses principales fonctionnalités. Enfin, un bilan du projet et les pistes d'évolution
+envisagées seront présentés.
+

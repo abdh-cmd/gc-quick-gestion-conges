@@ -1,0 +1,21 @@
+:root {
+	--gc-red-900: #8b000f;
+	--gc-red-700: #c20f29;
+	--gc-red-500: #ef334e;
+	--gc-paper: #fff8f8;
+	--gc-ink: #2a1417;
+	--gc-muted: #77585d;
+}
+
+* { box-sizing: border-box; }
+
+html, body { margin: 0; min-height: 100%; }
+
+body {
+	background: radial-gradient(circle at top left, rgba(255, 182, 193, 0.28), transparent 24%), linear-gradient(180deg, #fff6f6 0%, #fffdfb 100%);
+	color: var(--gc-ink);
+	font-family: Arial, sans-serif;
+}
+
+button, input, select, textarea { font: inherit; }
+button { cursor: pointer; }

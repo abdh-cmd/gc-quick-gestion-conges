@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1380" viewBox="0 0 1600 1380">
+  <rect width="1600" height="1380" fill="#ffffff"/>
+  <style>
+    .title { font-family: Arial, sans-serif; font-size: 34px; font-weight: 700; fill: #172033; }
+    .box { stroke: #24334c; stroke-width: 2.5; rx: 12; ry: 12; }
+    .main { fill: #17365d; } .lead { fill: #2f5597; } .team { fill: #dce6f1; }
+    .name { font-family: Arial, sans-serif; font-size: 22px; font-weight: 700; text-anchor: middle; }
+    .role { font-family: Arial, sans-serif; font-size: 18px; text-anchor: middle; }
+    .light { fill: #fff; } .dark { fill: #172033; }
+    .line { stroke: #52657e; stroke-width: 3; fill: none; }
+  </style>
+  <text x="800" y="65" class="title" text-anchor="middle">Organigramme – Quick Rosny DI 2</text>
+
+  <path class="line" d="M800 205V250 M800 250H800V280"/>
+  <path class="line" d="M800 365V410"/><path class="line" d="M800 495V540"/><path class="line" d="M800 625V670"/>
+  <path class="line" d="M800 755V790H390V825 M800 790H1160V825"/>
+  <path class="line" d="M1160 935V980H410V1015 M1160 980H760V1015 M1160 980H1110V1015 M1160 980H1410V1015"/>
+
+  <rect x="580" y="110" width="440" height="95" class="box main"/><text x="800" y="151" class="role light">Direction</text><text x="800" y="181" class="name light">Quick France</text>
+  <rect x="580" y="280" width="440" height="85" class="box lead"/><text x="800" y="316" class="role light">Franchisé</text><text x="800" y="345" class="name light">El Machkour Abdellah</text>
+  <rect x="580" y="410" width="440" height="85" class="box lead"/><text x="800" y="446" class="role light">Superviseur</text><text x="800" y="475" class="name light">Sonko Chérif</text>
+  <rect x="580" y="540" width="440" height="85" class="box lead"/><text x="800" y="576" class="role light">Directeur</text><text x="800" y="605" class="name light">Bouaassria Aziz</text>
+
+  <rect x="170" y="825" width="440" height="110" class="box team"/><text x="390" y="867" class="role dark">Ressources humaines</text><text x="390" y="900" class="name dark">Quantin Nadège</text>
+  <rect x="940" y="825" width="440" height="110" class="box team"/><text x="1160" y="867" class="role dark">Manager</text><text x="1160" y="900" class="name dark">Perrin Jérôme</text>
+
+  <rect x="210" y="1015" width="400" height="105" class="box team"/><text x="410" y="1055" class="role dark">Équipier expert</text><text x="410" y="1087" class="name dark">Tetbirt Mustapha</text>
+  <rect x="620" y="1015" width="280" height="105" class="box team"/><text x="760" y="1055" class="role dark">Équipier expert</text><text x="760" y="1087" class="name dark">Moudjahed Abdelhakim</text>
+  <rect x="970" y="1015" width="280" height="105" class="box team"/><text x="1110" y="1055" class="role dark">Support</text><text x="1110" y="1087" class="name dark">informatique</text>
+  <rect x="1280" y="1015" width="260" height="105" class="box team"/><text x="1410" y="1055" class="role dark">Équipe</text><text x="1410" y="1087" class="name dark">30 équipiers polyvalents</text>
+</svg>
